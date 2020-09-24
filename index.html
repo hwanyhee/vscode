@@ -16,21 +16,27 @@
         </div>
         <div class="row">
             <!--
-    <button type="button" onclick="init()">Start</button>
-        -->
+            <button type="button" onclick="init()">Start</button>
+            -->
             <!--6. 이미지로 변경시 예측 버튼 추가-->
-            <button type="button" onclick="predict()">예측하기</button>
+            <div class="col-md-8">
+                <button type="button" onclick="predict()">예측하기</button>
+            </div>
         </div>
         <div class="row">
             <!--<div id="webcam-container"></div>-->
             <!--웹캠 화면이 뿌려짐-->
-            <div id="label-container"></div>
+            <div class="col-md-8">
+                <div id="label-container"></div>
+            </div>
         </div>
         <div class="row">
             <h1>이미지 업로드<small>미리보기지원</small></h1>
         </div>
         <div class="row">
-            <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
+            <div class="col-md-8">
+                <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
+            </div>
         </div>
         <div class="row">
             <!--
@@ -39,7 +45,9 @@
                 img {max-width:100%;height:auto}
 
             -->
-            <img class="img-responsive center-block img-circle" id="preview_image" src='/images/cats.jpg' />
+            <div class="col-md-8">
+                <img class="img-responsive center-block img-circle" id="preview_image" src='/images/cats.jpg' />
+            </div>
         </div>
     </div>
         <!--여기에 분석 결과 뿌려줌-->
