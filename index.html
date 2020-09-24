@@ -11,20 +11,36 @@
 
 <body>
     <div class="container">
-        <div>Teachable Machine Image Model</div>
-        <!--
-<button type="button" onclick="init()">Start</button>
-    -->
-        <!--6. 이미지로 변경시 예측 버튼 추가-->
-        <button type="button" onclick="predict()">예측하기</button>
-        <!--<div id="webcam-container"></div>-->
-        <!--웹캠 화면이 뿌려짐-->
-        <div id="label-container"></div>
-        <h1>이미지 업로드<small>미리보기지원</small></h1>
+        <div class="row">
+            <h1>Teachable Machine Image Model</h1>
+        </div>
+        <div class="row">
+            <!--
+    <button type="button" onclick="init()">Start</button>
+        -->
+            <!--6. 이미지로 변경시 예측 버튼 추가-->
+            <button type="button" onclick="predict()">예측하기</button>
+        </div>
+        <div class="row">
+            <!--<div id="webcam-container"></div>-->
+            <!--웹캠 화면이 뿌려짐-->
+            <div id="label-container"></div>
+        </div>
+        <div class="row">
+            <h1>이미지 업로드<small>미리보기지원</small></h1>
+        </div>
+        <div class="row">
+            <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
+        </div>
+        <div class="row">
+            <!--
+                다음 CSS코드를 추가하면 img요소의 class값에
+                img-responsive를 추가하지 않아도 모든 이미지가 반응형이 됨
+                img {max-width:100%;height:auto}
 
-        <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
-        <img class="img-circle" id="preview_image" src='/images/cats.jpg' />
-
+            -->
+            <img class="img-responsive center-block img-circle" id="preview_image" src='/images/cats.jpg' />
+        </div>
     </div>
         <!--여기에 분석 결과 뿌려줌-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -136,6 +152,7 @@
                     console.log(e.target.result)//브라우저 콘솔창의 COPY클릭후 주소창에 넣으면 이미지가 보인다
                     //미리보기
                     $('#preview_image').attr('src', e.target.result);
+                    
 
                 }
             }
