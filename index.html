@@ -7,11 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     
-</head>
 
 <body>
-    <div class="container">
-        <div class="row">
+    <div class="container" >
+        <div class="row" style="text-align:center;">
             <h1>Teachable Machine Image Model</h1>
         </div>
         <div class="row">
@@ -19,33 +18,33 @@
             <button type="button" onclick="init()">Start</button>
             -->
             <!--6. 이미지로 변경시 예측 버튼 추가-->
-            <div class="col-md-12">
+            <div style="text-align:center;">
                 <button type="button" onclick="predict()" >예측하기</button>
             </div>
         </div>
         <div class="row">
             <!--<div id="webcam-container"></div>-->
             <!--웹캠 화면이 뿌려짐-->
-            <div class="col-md-12">
+            <div  style="text-align:center;">
                 <div id="label-container" ></div>
             </div>
         </div>
-        <div class="row">
-            <h1>이미지 업로드<small>미리보기지원</small></h1>
+        <div class="row" style="text-align: center;">
+            <h1 >이미지 업로드<small>미리보기지원</small></h1>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <input type='file' id="upload_image" accept=".png, .jpg, .jpeg" />
+        <div class="row" >
+            <div class="center-block" style="width:30%;">
+                <input type='file' id="upload_image" accept=".png, .jpg, .jpeg"/>
             </div>
         </div>
-        <div class="row">
+        <div class="row" >
             <!--
                 다음 CSS코드를 추가하면 img요소의 class값에
                 img-responsive를 추가하지 않아도 모든 이미지가 반응형이 됨
                 img {max-width:100%;height:auto}
 
             -->
-            <div class="col-md-12">
+            <div class="center-block" style="width:50%;">
                 <img class="img-responsive img-circle" id="preview_image" src='/images/cats.jpg' />
             </div>
         </div>
